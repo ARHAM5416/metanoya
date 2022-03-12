@@ -60,6 +60,17 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+@font-face {
+    font-family: dyslexia;
+    src: url(../fonts/OpenDyslexic-Regular.otf) format("opentype");
+  }
+
+  @font-face {
+    font-family: comic;
+    src: url(../fonts/COMIC.TTF) format("truetype");
+  }
+
 html {
     overflow-x: hidden;
 }
@@ -77,8 +88,8 @@ body {
 } */
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
+    font-family: 'comic';
+    font-size: 19px;
     /* overflow-x: hidden; */
     padding: 0 !important;
 }
@@ -88,11 +99,16 @@ body {
 }
 
 p {
-    font-family: PT Sans, sans-serif;
-    color: #999;
+    font-family: 'comic';
+
+    /* color: #999; */
+    color: black;
     font-weight: 300;
     line-height: 1.8;
     letter-spacing: 0.5px;
+    /* background-color: #ecd0b2; */
+    padding: 30px;
+    /* background-image: url(../images/b1.png); */
 }
 
 span {
@@ -102,7 +118,8 @@ span {
 
 a {
     color: #333743;
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
 }
 
 a:focus,
@@ -140,7 +157,8 @@ h4,
 h5,
 h6 {
     color: #333743;
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     letter-spacing: 0.5px;
 }
 
@@ -150,7 +168,8 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
 }
 
 .text-link {
@@ -274,9 +293,13 @@ h6 a {
     background-color: #f6f7fb !important;
 }
 
-.bg-gray .heading-1:before {
+/* .bg-gray .heading-1:before {
     background-color: #f6f7fb;
-}
+} */
+
+/* .bg-gray .heading-1:before {
+    
+} */
 
 .bg-danger {
     background-color: #f54053;
@@ -303,8 +326,16 @@ iframe {
 --------- 2. Section ---------
 ----------------------------*/
 
-section {
+/* section {
     background-color: #fff;
+} */
+
+.parents-message {
+    padding: 0px 0px!important;
+}
+
+section {
+    background-color: #d1dac5;
 }
 
 .section-1 {
@@ -405,11 +436,11 @@ section {
     position: absolute;
     top: -50%;
     left: 0px;
-    -webkit-animation: kenburn 60s infinite;
+    /* -webkit-animation: kenburn 60s infinite;
     -moz-animation: kenburn 60s infinite;
     -ms-animation: kenburn 60s infinite;
     -o-animation: kenburn 60s infinite;
-    animation: kenburn 60s infinite;
+    animation: kenburn 60s infinite; */
     width: 100%;
     height: auto;
     z-index: 1;
@@ -3615,7 +3646,7 @@ section {
 .header.navbar-fixed-top.sticky ul.navbar-nav > li > a {
     padding-top: 25px;
     padding-bottom: 25px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -3670,21 +3701,29 @@ section {
     border: none;
     border-radius: 0;
     margin-bottom: 0;
+    /* height: 110px!important; */
+    min-height: 100px;
 }
 
 @media only screen and (max-width: 992px) {
     .header .navbar-collapse {
-        background-color: #333743;
+        /* background-color: #333743; */
+        /* background-image: url(../images/menu-bg.jpg); */
+        background-color: #F4FFAD;
         padding: 0px;
         overflow-x: hidden;
         max-height: 400px;
     }
     .header .navbar-collapse ul li.open ul.dropdown-menu {
-        background-color: #2a2a33;
+        /* background-color: #2a2a33; */
+        /* background-image: url(../images/menu-bg.jpg); */
+        background-color: #F4FFAD;
     }
     .header .navbar-collapse ul li.open ul.dropdown-menu li a:hover,
     .header .navbar-collapse ul li.open ul.dropdown-menu li a:focus {
-        background-color: #2a2a33;
+        /* background-color: #2a2a33; */
+        /* background-image: url(../images/menu-bg.jpg); */
+        background-color: #F4FFAD;
     }
 }
 
@@ -3715,7 +3754,9 @@ section {
 
 .header.header-transparent,
 .header.header-sticky.sticky {
-    background-color: transparent;
+    /* background-color: transparent; */
+    /* background-image: url(../images/menu-bg.jpg); */
+    background-color: #F4FFAD;
     top: 0px;
     z-index: 1088;
     width: 100%;
@@ -3756,7 +3797,9 @@ section {
 }
 
 .header.header-sticky.sticky {
-    background-color: #fff;
+    /* background-color: #fff; */
+    /* background-image: url(../images/menu-bg.jpg); */
+    background-color: #F4FFAD;
     position: fixed;
     -webkit-box-shadow: 2px 10px -7px rgba(0, 0, 0, 0.5) false;
     -moz-box-shadow: 2px 10px -7px rgba(0, 0, 0, 0.5) false;
@@ -3784,7 +3827,7 @@ section {
 .header.header-sticky.sticky ul.navbar-nav > li > a {
     padding-top: 25px;
     padding-bottom: 25px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .header.header-sticky.sticky .side-header-toggle {
@@ -3835,7 +3878,7 @@ section {
 .header ul.navbar-nav > li > a {
     padding: 35px 15px;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -3863,7 +3906,8 @@ section {
     .header .navbar-collapse ul.navbar-nav > li > a {
         padding-top: 15px;
         padding-bottom: 15px;
-        color: #cecece;
+        /* color: #cecece; */
+        color: black;
     }
     .header .navbar-collapse ul.navbar-nav > li > a:hover,
     .header .navbar-collapse ul.navbar-nav > li > a:focus {
@@ -3890,6 +3934,7 @@ section {
     }
     .header .navbar-collapse ul.navbar-nav .caret:before {
         font-family: "exclusive-icon";
+        /* font-family: 'dyslexia'; */
         content: "\e224";
     }
     .header .navbar-collapse ul.navbar-nav .open > a > .caret {
@@ -3916,7 +3961,9 @@ section {
     margin: 0px;
     box-shadow: none;
     min-width: 200px;
-    background-color: #2a2a33;
+    /* background-color: #2a2a33; */
+    /* background-image: url(../images/menu-bg.jpg) ; */
+    background-color: #F4FFAD;
 }
 
 @media only screen and (min-width: 992px) {
@@ -3948,17 +3995,27 @@ section {
     font-weight: bold;
 }
 
+@media screen and (max-width: 992px) {
+    .header .dropdown-menu > li > a,
+    .header .dropdown-menu .mega-menu-content ul li a  {
+     color: black!important;
+    }
+  }
+  
+
 .header .dropdown-menu > li > a,
 .header .dropdown-menu .mega-menu-content ul li a {
+    font-size: 16px;
     display: block;
     line-height: 2;
-    color: #999;
-    padding: 5px 15px;
+    color: black;
+    padding: 5px 35px;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
+    background: transparent!important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -3979,19 +4036,20 @@ section {
 @media only screen and (min-width: 992px) {
     .header .dropdown-menu li:hover > a,
     .header .dropdown-menu li:focus > a {
-        background-color: #333743;
-        color: #fff;
+        /* background-color: #333743; */
+        /* color: #fff; */
+        color: #2e71f0;
     }
 }
 
-.header .dropdown-menu li.sub-menu > a:after {
+/* .header .dropdown-menu li.sub-menu > a:after {
     font-family: "exclusive-icon";
     content: "\e224";
     position: absolute;
     font-size: 7px;
     top: 12px;
     right: 15px;
-}
+} */
 
 @media only screen and (max-width: 992px) {
     .header .dropdown-menu li.sub-menu > a:after {
@@ -4488,7 +4546,8 @@ section {
 
 .header .header-full-screen .fs-nav .fs-nav-item a .fs-nav-title {
     color: #fff;
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 32px;
     display: block;
     transition: all 0.3s ease;
@@ -4621,6 +4680,7 @@ section {
 
 .side-header .navbar-nav.sm-collapsible .caret:before {
     font-family: "exclusive-icon";
+    /* font-family: 'dyslexia'; */
     content: "\e224";
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -4650,6 +4710,7 @@ section {
 .side-header {
     width: 280px;
     background-color: #333743;
+    /* background-image: url("../images/texture.jpg"); */
     z-index: 1000;
     top: 0px;
     bottom: 0px;
@@ -4735,6 +4796,7 @@ section {
 
 .side-header ul.side-header-menu li a .caret:before {
     font-family: "exclusive-icon";
+    /* font-family: 'dyslexia'; */
     content: "\e224";
 }
 
@@ -5391,7 +5453,7 @@ section {
 
 .hero-img {
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 
@@ -5985,7 +6047,8 @@ section {
 .product-banner,
 .features-block-5 {
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-image: url(../images/img-bg4.jpg);
     margin-bottom: 30px;
     -webkit-box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.1);
@@ -6234,7 +6297,8 @@ section {
 .product-banner .product-name {
     color: #333743;
     letter-spacing: 0.5px;
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 21px;
 }
 
@@ -6265,7 +6329,8 @@ section {
 .shop-product .product-name {
     color: #333743;
     letter-spacing: 0.5px;
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 21px;
 }
 
@@ -6330,7 +6395,8 @@ section {
 }
 
 .color-selector label input[type="radio"]:checked ~ .color-indicator:after {
-    font-family: "exclusive-icon";
+    /* font-family: "exclusive-icon"; */
+    font-family: 'comic';
     content: "\e18f";
     color: #fff;
 }
@@ -6382,7 +6448,10 @@ section {
 ----------------------------*/
 
 .footer-default {
-    background-color: #333743;
+    /* filter: brightness(90%); */
+    /* filter: grayscale(25%); */
+    /* background-image: url(../images/img-footer2.jpg ); */
+    background-color: #F4FFAD;
     padding-top: 80px;
 }
 
@@ -6515,7 +6584,8 @@ section {
 ----------------------------*/
 
 .btn {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     text-align: center;
     border-radius: 0px;
     margin-bottom: 10px;
@@ -6645,7 +6715,8 @@ section {
 
 .play-btn:before {
     content: "\e125";
-    font-family: "exclusive-icon";
+    /* font-family: "exclusive-icon"; */
+    font-family: 'comic';
 }
 
 .icon-btn-round {
@@ -8319,7 +8390,8 @@ label {
     width: 20px;
     height: 20px;
     content: "\e18f";
-    font-family: "exclusive-icon";
+    /* font-family: "exclusive-icon"; */
+    font-family: 'comic';
     text-align: center;
     color: #fff;
     font-size: 12px;
@@ -8467,7 +8539,7 @@ button:focus {
     }
 }
 
-.heading-1:after {
+/* .heading-1:after {
     content: "";
     position: absolute;
     width: 55px;
@@ -8475,7 +8547,7 @@ button:focus {
     top: -30px;
     left: -25px;
     z-index: -2;
-}
+} */
 
 @media only screen and (max-width: 767px) {
     .heading-1:after {
@@ -8491,7 +8563,7 @@ button:focus {
     top: 0px;
     left: 0px;
     z-index: -1;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .heading-1.text-center {
@@ -8526,9 +8598,9 @@ h1.heading-1:after {
     height: 85px;
 }
 
-h2.heading-1:after {
+/* h2.heading-1:after {
     height: 80px;
-}
+} */
 
 h2.heading-1.second-line:after {
     height: 108px;
@@ -8621,7 +8693,8 @@ h5.heading-1.second-line:after {
 }
 
 .features-block-1 .features-tittle {
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 18px;
@@ -8648,7 +8721,8 @@ h5.heading-1.second-line:after {
 }
 
 .features-block-2 .features-info .features-tittle {
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 18px;
@@ -8685,7 +8759,8 @@ h5.heading-1.second-line:after {
 }
 
 .features-block-3 .features-info .features-tittle {
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 18px;
@@ -8761,7 +8836,8 @@ h5.heading-1.second-line:after {
 }
 
 .features-block-5 .features-info .features-tittle {
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 20px;
@@ -8789,7 +8865,8 @@ h5.heading-1.second-line:after {
 
 .features-block-6 .features-info .features-tittle {
     position: relative;
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 20px;
@@ -9337,7 +9414,8 @@ h5.heading-1.second-line:after {
 }
 
 .team-1 .team-member .member-info .name {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 26px;
     margin-top: 30px;
 }
@@ -9361,7 +9439,8 @@ h5.heading-1.second-line:after {
 }
 
 .team-2 .team-member .member-info .name {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 26px;
     margin-top: 30px;
 }
@@ -9713,7 +9792,8 @@ h5.heading-1.second-line:after {
 }
 
 .tab-style-1 li a {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 17px;
     color: #333743;
     border: 0px;
@@ -9765,7 +9845,8 @@ h5.heading-1.second-line:after {
 }
 
 .tab-style-2 li a {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 17px;
     background-color: #fff;
     color: #333743;
@@ -9847,7 +9928,8 @@ h5.heading-1.second-line:after {
 }
 
 .tab-style-3 li a {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 17px;
     color: #ececec;
     padding: 20px 15px;
@@ -9931,7 +10013,8 @@ h5.heading-1.second-line:after {
 }
 
 .tab-style-4 li a {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 17px;
     text-align: center;
     padding: 20px 15px;
@@ -10133,6 +10216,7 @@ h5.heading-1.second-line:after {
     position: absolute;
     content: "\e199";
     font-family: "exclusive-icon";
+    /* font-family: 'comic'; */
     right: 20px;
     font-size: 10px;
     padding: 3px 4.5px;
@@ -10459,17 +10543,19 @@ h5.heading-1.second-line:after {
 }
 
 .widget .widget-tittle {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     color: #333743;
     font-size: 24px;
     margin-bottom: 25px;
 }
 
 .widget .widget-tittle-alt {
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
     color: #333743;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 25px;
@@ -10482,7 +10568,7 @@ h5.heading-1.second-line:after {
 .widget-link .link li a {
     display: inline-block;
     color: #999;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -10562,7 +10648,8 @@ h5.heading-1.second-line:after {
 
 .widget-gallery .gallery-item a:after {
     content: "\e267";
-    font-family: "exclusive-icon";
+    /* font-family: "exclusive-icon"; */
+    font-family: 'comic';
     position: absolute;
     height: 100%;
     width: 100%;
@@ -10657,7 +10744,7 @@ h5.heading-1.second-line:after {
 
 .widget-contact ul li {
     color: #999;
-    font-size: 16px;
+    font-size: 18px;
     display: block;
     padding-left: 30px;
     margin-bottom: 20px;
@@ -10668,6 +10755,7 @@ h5.heading-1.second-line:after {
     position: absolute;
     top: 5px;
     left: 0px;
+    color: black;
 }
 
 
@@ -11015,13 +11103,15 @@ h5.heading-1.second-line:after {
 -----------------------------*/
 
 .blog-slider .tab-head {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     font-size: 21px;
     color: #fff;
 }
 
 .blog-slider .tab-sub {
-    font-family: PT Sans, sans-serif;
+    /* font-family: PT Sans, sans-serif; */
+    font-family: 'comic';
     color: #ececec;
 }
 
@@ -11074,7 +11164,8 @@ h5.heading-1.second-line:after {
 .blog-sidebar .widget-link.dotted ul li a:before,
 .shop-sidebar .widget-link.dotted ul li a:before {
     content: "\e12b";
-    font-family: "exclusive-icon";
+    /* font-family: "exclusive-icon"; */
+    font-family: 'comic';
     margin-right: 15px;
     font-size: 10px;
 }
@@ -11363,7 +11454,8 @@ h5.heading-1.second-line:after {
 }
 
 .blog-card .blog-item .blog-wrapper .blog-content .blog-tittle a {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     letter-spacing: 0.5px;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -11546,7 +11638,8 @@ h5.heading-1.second-line:after {
 }
 
 .blog-list .blog-item .blog-content .blog-tittle a {
-    font-family: Roboto Condensed, sans-serif;
+    /* font-family: Roboto Condensed, sans-serif; */
+    font-family: 'comic';
     letter-spacing: 0.5px;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
@@ -11698,3 +11791,80 @@ h5.heading-1.second-line:after {
 
 
 /*# sourceMappingURL=main.css.map */
+.lb-1{
+    background-color: #d1dac5!important;
+}
+
+.lb-2{
+    background-color: #ecd0b2!important;
+}
+
+/* .head-bg{
+    background-image: url(../images/menu-bg.jpg);
+} */
+
+.head-bg{
+background-color: #F4FFAD;
+}
+
+.head-bg-2{
+    background-color: #D3F3FE;
+}
+
+.lb-3{
+    background-color: #c9b9ee;
+}
+
+.lb-4{
+    background-color: #c5acff;
+}
+
+.page-theme1{
+    background-color: #F4FFAD!important;
+}
+
+.page-theme2{
+    background-color: #ecd0b2;
+}
+
+.page-theme3{
+    background-color: #FED9CC;
+}
+
+
+.page-theme4{
+    background-color: #D3F3FF;
+}
+
+.page-theme5{
+    background-color: #DED1FC;
+}
+
+.page-theme6{
+    background-color: #D6EBC5;
+}
+
+.bg-img1{
+    background-image: url(../images/paper-bg.jpeg);
+}
+
+
+.bg-img2{
+    background-image: url(../images/img-b.png);
+}
+
+.bg-img3{
+    background-image: url(../images/board.png);
+}
+
+.bg-img4{
+    background-image: url(../images/menu-bg_copy_1110x1200.jpg);
+}
+
+.bg-img6{
+    background-image: url(../images/paper-texturejpg.jpeg);
+}
+
+.bg-img7{
+    background-image: url(../images/tex.jpg);
+}
